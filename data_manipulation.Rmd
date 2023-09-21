@@ -73,3 +73,30 @@ filter(litters_df, group != "con7" | gourp = "con8")
 
 ```
 
+# mutate
+
+this is used to add or change variables
+
+```{r}
+mutate(litters_df, wt_gain = gd18_weight - gd0_weight)
+
+mutate(litters_df, group=str_to_lower(group))
+
+mutate(litters_df,
+       wt_gain = gd18_weight - gd0_weight,
+       group=str_to_lower(group)
+)
+
+```
+
+what about missing rows
+
+```{r}
+drop_na(litters_df)
+drop_na(litters_df, gd0_weight)
+```
+
+# arrange
+
+
+
